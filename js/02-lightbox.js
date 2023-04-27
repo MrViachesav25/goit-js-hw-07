@@ -19,13 +19,10 @@ function createMarkupGallery(items) {
 }
 const addedMarkupGallery = createMarkupGallery(galleryItems);
 galleryListEl.innerHTML = addedMarkupGallery;
-window.addEventListener("click", clickImage);
-
-function clickImage(e) {
-  e.preventDefault();
-  const options = {
+const options = {
     captionsData: "alt",
     captionDelay: 250,
   };
-  const lightbox = new SimpleLightbox(".gallery a", options);
-};
+
+const lightbox = new SimpleLightbox(".gallery a", options);
+
